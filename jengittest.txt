@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages{
+        stage ("Test"){
+            steps {
+            echo "jenkins github test"
+            }
+        }
+    }
+    post{
+        success {
+            echo "success"
+        }
+        failure {
+            echo "failure"
+        }
+    }
+}
